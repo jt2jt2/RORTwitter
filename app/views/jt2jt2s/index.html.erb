@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Jt2jt2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jt2jt2s.each do |jt2jt2| %>
+      <tr>
+        <td><%= jt2jt2.content %></td>
+        <td><%= link_to 'Show', jt2jt2 %></td>
+        <td><%= link_to 'Edit', edit_jt2jt2_path(jt2jt2) %></td>
+        <td><%= link_to 'Destroy', jt2jt2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jt2jt2', new_jt2jt2_path %>
